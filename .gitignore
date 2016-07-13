@@ -1,5 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
-target/
-dist/
-.idea/
-.settings/
+/target
+/dist
+/.idea
+/.settings
