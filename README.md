@@ -9,7 +9,9 @@ You will get your scripts after executing `./build.sh`, move the scripts to any 
 Please go to `IntDefCheckerTest.java` and `StringDefCheckerTest.java` for executing unit test.
 
 ### 2. Use
-`./fenumext-intdef-check.sh ./tests/intdef/TestInstance.java ` OR `./fenumext-stringdef-check.sh ./tests/stringdef/TestInstance.java `
+`./fenumext-intdef-check.sh ./tests/intdef/TestInstance.java `    
+OR     
+`./fenumext-stringdef-check.sh ./tests/stringdef/TestInstance.java `
 
 #### Here is the result of `@IntDef` check on the test files.
 ```bash
