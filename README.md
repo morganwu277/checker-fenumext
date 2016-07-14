@@ -2,10 +2,11 @@
 Use CheckerFramwork implement the @IntDef/@StringDef annotations.
 
 ### 1. Build
+Please use Java 1.8 version.
 You will get your scripts after executing `./build.sh`, move the scripts to any $PATH directory, or you can set the `dist` directory as one of the $PATH directories. 
 
 #### 1.1. Test
-Please go to IntDefCheckerTest.java and StringDefCheckerTest.java for executing unit test.
+Please go to `IntDefCheckerTest.java` and `StringDefCheckerTest.java` for executing unit test.
 
 ### 2. Use
 `./fenumext-intdef-check.sh ./tests/intdef/TestInstance.java ` OR `./fenumext-stringdef-check.sh ./tests/stringdef/TestInstance.java `
