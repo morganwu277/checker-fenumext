@@ -7,4 +7,6 @@ if [ "$CHECKERFRAMEWORK" = "" ]; then
   exit 1;
 fi
 
-javac -AprintErrorStack -XprintProcessorInfo -cp $myDir/dist/checker-fenumext-0.0.1-SNAPSHOT.jar:$CHECKERFRAMEWORK/checker/dist/checker.jar -processor org.checkerframework.checker.intdef.IntDefChecker "$@"
+cd $myDir
+
+javac -AprintErrorStack -XprintProcessorInfo -cp ./checker-fenumext-0.0.1-SNAPSHOT.jar:$CHECKERFRAMEWORK/checker/dist/checker.jar -processor org.checkerframework.checker.intdef.IntDefChecker "$@"
