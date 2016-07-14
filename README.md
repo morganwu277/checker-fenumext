@@ -2,7 +2,7 @@
 Use CheckerFramwork implement the @IntDef/@StringDef annotations.
 
 ### 1. Build
-Please use Java 1.8 version.   
+Please use Java 1.8 version and Maven.   
 You will get your scripts after executing `./build.sh`, move the scripts to any $PATH directory, or you can set the `dist` directory as one of the $PATH directories. 
 
 #### 1.1. Test
