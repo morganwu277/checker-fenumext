@@ -1,13 +1,5 @@
 package org.checkerframework.checker.stringdef;
 
-import java.lang.annotation.Annotation;
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
-
-import javax.lang.model.element.AnnotationMirror;
-
 import org.checkerframework.checker.stringdef.qual.StringDef;
 import org.checkerframework.checker.stringdef.qual.StringDefBottom;
 import org.checkerframework.checker.stringdef.qual.StringDefTop;
@@ -20,6 +12,13 @@ import org.checkerframework.framework.type.QualifierHierarchy;
 import org.checkerframework.framework.util.GraphQualifierHierarchy;
 import org.checkerframework.framework.util.MultiGraphQualifierHierarchy.MultiGraphFactory;
 import org.checkerframework.javacutil.AnnotationUtils;
+
+import javax.lang.model.element.AnnotationMirror;
+import java.lang.annotation.Annotation;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 
 public class StringDefAnnotatedTypeFactory extends BaseAnnotatedTypeFactory {
@@ -117,7 +116,7 @@ public class StringDefAnnotatedTypeFactory extends BaseAnnotatedTypeFactory {
         } else {
           List<String> lhs_str = FenumExtUtils.getStringValueList(lhs.toString());
           List<String> rhs_str = FenumExtUtils.getStringValueList(rhs.toString());
-          return lhs_str.containsAll(rhs_str);
+          return lhs_str.containsAll(rhs_str) && rhs_str.containsAll(lhs_str);
         }
       }
       // Ignore annotation values to ensure that annotation is in supertype map.

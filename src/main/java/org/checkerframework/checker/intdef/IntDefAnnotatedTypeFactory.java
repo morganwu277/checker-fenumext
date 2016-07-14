@@ -1,13 +1,5 @@
 package org.checkerframework.checker.intdef;
 
-import java.lang.annotation.Annotation;
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
-
-import javax.lang.model.element.AnnotationMirror;
-
 import org.checkerframework.checker.intdef.qual.IntDef;
 import org.checkerframework.checker.intdef.qual.IntDefBottom;
 import org.checkerframework.checker.intdef.qual.IntDefTop;
@@ -20,6 +12,13 @@ import org.checkerframework.framework.type.QualifierHierarchy;
 import org.checkerframework.framework.util.GraphQualifierHierarchy;
 import org.checkerframework.framework.util.MultiGraphQualifierHierarchy.MultiGraphFactory;
 import org.checkerframework.javacutil.AnnotationUtils;
+
+import javax.lang.model.element.AnnotationMirror;
+import java.lang.annotation.Annotation;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 
 public class IntDefAnnotatedTypeFactory extends BaseAnnotatedTypeFactory {
@@ -117,7 +116,7 @@ public class IntDefAnnotatedTypeFactory extends BaseAnnotatedTypeFactory {
         } else {
           List<Integer> lhs_int = FenumExtUtils.getIntValueList(lhs.toString());
           List<Integer> rhs_int = FenumExtUtils.getIntValueList(rhs.toString());
-          return lhs_int.containsAll(rhs_int);
+          return lhs_int.containsAll(rhs_int) && rhs_int.containsAll(lhs_int);
         }
       }
       // Ignore annotation values to ensure that annotation is in supertype map.
