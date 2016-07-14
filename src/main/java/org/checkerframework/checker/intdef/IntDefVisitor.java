@@ -1,10 +1,6 @@
 package org.checkerframework.checker.intdef;
 
-import java.util.Collections;
-import java.util.Set;
-
-import javax.lang.model.element.AnnotationMirror;
-
+import com.sun.source.tree.*;
 import org.checkerframework.common.basetype.BaseTypeChecker;
 import org.checkerframework.common.basetype.BaseTypeVisitor;
 import org.checkerframework.framework.source.Result;
@@ -14,12 +10,9 @@ import org.checkerframework.framework.type.AnnotatedTypeMirror.AnnotatedExecutab
 import org.checkerframework.framework.type.QualifierHierarchy;
 import org.checkerframework.javacutil.TreeUtils;
 
-import com.sun.source.tree.BinaryTree;
-import com.sun.source.tree.CaseTree;
-import com.sun.source.tree.ExpressionTree;
-import com.sun.source.tree.NewClassTree;
-import com.sun.source.tree.SwitchTree;
-import com.sun.source.tree.Tree;
+import javax.lang.model.element.AnnotationMirror;
+import java.util.Collections;
+import java.util.Set;
 
 public class IntDefVisitor extends BaseTypeVisitor<IntDefAnnotatedTypeFactory> {
   public IntDefVisitor(BaseTypeChecker checker) {
@@ -79,7 +72,6 @@ public class IntDefVisitor extends BaseTypeVisitor<IntDefAnnotatedTypeFactory> {
   /**
    * Tests that the qualifiers present on the useType are valid qualifiers,
    * given the qualifiers on the declaration of the type, declarationType.
-   * 可能不需要重写
    */
   @Override
   public boolean isValidUse(AnnotatedDeclaredType declarationType, AnnotatedDeclaredType useType, Tree tree) {
