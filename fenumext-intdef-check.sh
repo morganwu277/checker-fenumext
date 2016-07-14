@@ -9,4 +9,4 @@ fi
 
 cd $myDir
 
-javac -AprintErrorStack -XprintProcessorInfo -cp ./checker-fenumext-0.0.1-SNAPSHOT.jar:$CHECKERFRAMEWORK/checker/dist/checker.jar -processor org.checkerframework.checker.intdef.IntDefChecker "$@"
+javac -AprintErrorStack -XprintProcessorInfo -cp ./checker-fenumext-0.0.1-SNAPSHOT.jar:$CHECKERFRAMEWORK/checker/dist/checker.jar -processor org.checkerframework.checker.intdef.IntDefChecker -Aquals=intdef.GradeNumber,intdef.ClassNumber "$@"
