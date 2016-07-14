@@ -23,8 +23,7 @@ import java.util.Set;
 
 public class IntDefAnnotatedTypeFactory extends BaseAnnotatedTypeFactory {
 
-  protected AnnotationMirror INTDEF_UNQUALIFIED;
-  protected AnnotationMirror INTDEF, INTDEF_BOTTOM;
+  protected AnnotationMirror INTDEF_UNQUALIFIED, INTDEF, INTDEF_BOTTOM;
 
   public IntDefAnnotatedTypeFactory(BaseTypeChecker checker) {
     super(checker);

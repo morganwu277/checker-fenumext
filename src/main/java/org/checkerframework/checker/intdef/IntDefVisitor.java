@@ -41,6 +41,11 @@ public class IntDefVisitor extends BaseTypeVisitor<IntDefAnnotatedTypeFactory> {
   }
 
   @Override
+  public Void visitTypeCast(TypeCastTree node, Void p) {
+    return super.visitTypeCast(node, p);
+  }
+
+  @Override
   public Void visitSwitch(SwitchTree node, Void p) {
     ExpressionTree expr = node.getExpression();
     AnnotatedTypeMirror exprType = atypeFactory.getAnnotatedType(expr);
