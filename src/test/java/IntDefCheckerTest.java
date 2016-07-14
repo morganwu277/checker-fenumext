@@ -14,7 +14,7 @@ public class IntDefCheckerTest extends CheckerFrameworkTest {
         "-XprintProcessorInfo",
         "-verbose",
         "-Anomsgtext",
-        "-Aquals=intdef.GradeNumber"
+        "-Aquals=intdef.GradeNumber,intdef.ClassNumber"
     );
   }
 

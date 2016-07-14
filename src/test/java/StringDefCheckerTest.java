@@ -13,7 +13,8 @@ public class StringDefCheckerTest extends CheckerFrameworkTest {
         "",
         "-XprintProcessorInfo",
         "-verbose",
-        "-Anomsgtext"
+        "-Anomsgtext",
+        "-Aquals=stringdef.SchoolName,stringdef.DepartName"
 
     );
   }
