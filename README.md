@@ -1,3 +1,4 @@
+![travis-build](https://travis-ci.org/morganwu277/checker-fenumext.svg?branch=master)
 ## CheckerFramework @IntDef/@StringDef annotations.
 Use CheckerFramwork implement the @IntDef/@StringDef annotations.
 
