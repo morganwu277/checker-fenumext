@@ -92,5 +92,3 @@ Processor org.checkerframework.checker.stringdef.StringDefChecker matches [] and
 1 warning
 
 ```
-
-
